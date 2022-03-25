@@ -38,3 +38,9 @@ Route::get('/', function () {
     ];
     return view('home', $data);
 });
+
+//route per documentazione
+Route::get('/doc', function () {
+    
+    return view('doc');
+});
