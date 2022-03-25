@@ -63,3 +63,30 @@ Route::get('/doc', function () {
     ];
     return view('doc', $data);
 });
+
+// route per faq
+Route::get('/faq', function () {
+    
+    $data = [
+
+        "title" => 'Non esistono domande inutili!',
+
+        "list" => [
+
+            "Why Laravel?" => "There are a variety of tools and frameworks available to you when building a web application. However, we believe Laravel is the best choice for building modern, full-stack web applications.",
+            
+            "Why Symfony?" => "Error... 404 aaaa",
+
+            "Come posso usare Google One se non ho un abbonamento?" => "Hai sbagliato pagina!"
+        ],
+
+        "buttons" => [
+
+            "/" => 'Home',
+            "/doc" => 'Documentazione',
+            "/us" => 'Chi Siamo',
+
+        ],
+    ];
+    return view('faq', $data);
+});
