@@ -26,7 +26,14 @@ Route::get('/', function () {
         "saluto" => 'Hello, World!',
         "nome" => 'Antonio',
         "cognome" => 'Giachin',
-        "lista" => ['Home', 'Documentazione', 'Faq', 'Chi Siamo']
+        "lista" => [
+
+            'Home'=>'/',
+            'Documentazione' => '/doc',
+            'Faq' => '/faq', 
+            'Chi Siamo' => '/us',
+    
+        ],
     
     ];
     return view('home', $data);

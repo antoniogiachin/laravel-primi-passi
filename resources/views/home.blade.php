@@ -64,8 +64,8 @@
     </div>
     <div class="lista">
         <ul>
-            @foreach ($lista as $item)
-            <li><a href="#">{{$item}}</a></li>
+            @foreach ($lista as $key => $item)
+            <li><a href="{{$item}}">{{$key}}</a></li>
             @endforeach
             <!-- <li><a href="#">Ciao</a></li>
             <li><a href="#">Ciao</a></li>
