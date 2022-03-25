@@ -33,6 +33,7 @@
             border: none;
             background-color: transparent;
             border: 3px solid lightgray;
+            margin: 0 5rem;
         }
 
         button a {
@@ -52,6 +53,7 @@
 
         button:hover{
             transform: scale(1.2);
+            text-transform: uppercase;
         }
 
         ul{
@@ -66,25 +68,25 @@
 </head>
 <body>
     
-    <h1> Non vendiamo sogni, ma ci andiamo vicino!</h1>
+    <h1> {{$title}}</h1>
 
     <div class="container">
         <div class="faq">
             <ul>
+                @foreach ($list as $key => $value)
                 <li>
-                    <h2>Come ti chiami?</h2>
-                    <p>Dovresti saperlo...</p>
+                    <h2>{{$key}}</h2>
+                    <p>{{$value}}</p>
                 </li>
-                <li>
-                    <h2>Cosa vendete?</h2>
-                    <p>Ci occupiamo di vendere...</p>
-                </li>
+                @endforeach
             </ul>
         </div>
     </div>
     
     <div class="btn-container">
-        <button><a href="/">HOME</a></button>
+        @foreach ($buttons as $key => $value)
+        <button><a href="{{$key}}">{{$value}}</a></button>
+        @endforeach
     </div>
 
 </body>
