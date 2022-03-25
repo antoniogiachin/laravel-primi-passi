@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+//visualizzo la mia homepage
+// dinamicizzo il mio messaggio con aggiunta di DATA
+
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+
+        "saluto" => 'Hello, World!',
+        "nome" => 'Antonio',
+        "cognome" => 'Giachin',
+        "lista" => ['Home', 'Documentazione', 'Faq', 'Chi Siamo']
+    
+    ];
+    return view('home', $data);
 });
